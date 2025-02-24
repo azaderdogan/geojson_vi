@@ -50,7 +50,7 @@ class GeoJSONFeature implements GeoJSON {
       geometry,
       properties:
           map['properties'] != null ? Map.castFrom(map['properties']) : null,
-      id: map['id'],
+      id: map['geometryKey']?.toString(),
       title: map['title'],
     );
   }
